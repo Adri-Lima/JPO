@@ -1,0 +1,106 @@
+* {
+  margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+  padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+  box-sizing: border-box; /* Incluye bordes y relleno en el tamaño total del elemento */
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Aplica la fuente 'Roboto' a todo el cuerpo */
+  display: flex; /* Usa flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+.calculator {
+  background-color: #383838; /* Fondo gris oscuro para la calculadora */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+  width: 300px; /* Ancho de la calculadora */
+  padding: 20px; /* Espaciado interno */
+  display: flex; /* Usa flexbox para organizar los elementos */
+  flex-direction: column; /* Coloca los elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  position: relative; /* Posiciona la calculadora en relación a su contenedor */
+}
+
+.display {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 60px; /* Altura del área de visualización */
+  font-size: 2em; /* Tamaño de fuente grande para los números */
+  text-align: right; /* Alinea el texto a la derecha */
+  margin-bottom: 20px; /* Espaciado inferior */
+  padding: 15px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000; /* Texto negro */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+  transition: all 0.3s ease-in-out; /* Transición suave para cambios de estilo */
+}
+
+.buttons {
+  display: grid; /* Usa un diseño de cuadrícula */
+  grid-template-columns: repeat(4, 1fr); /* Divide en 4 columnas iguales */
+  gap: 15px; /* Espaciado entre los botones */
+}
+
+.button {
+  background-color: #18b5bb5e; /* Fondo semitransparente azul verdoso */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Bordes redondeados */
+  font-size: 1.5em; /* Tamaño de fuente mediano */
+  padding: 15px; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre el botón */
+  transition: all 0.3s ease; /* Transición suave para cambios de estilo */
+  color: white; /* Texto blanco */
+  position: relative; /* Posiciona el botón en relación a su contenedor */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+.button:hover {
+  background-color: #00ffea; /* Cambia el fondo a un azul más brillante al pasar el cursor */
+  transform: translateY(-5px); /* Eleva el botón ligeramente */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+.operator {
+  background-color: #00ff403f; /* Fondo semitransparente verde */
+}
+
+.operator:hover {
+  background-color: #00ff6a; /* Cambia a un verde más brillante al pasar el cursor */
+}
+
+.equals {
+  background-color: #00ffb342; /* Fondo verde brillante */
+  grid-column: span 2; /* Ocupa dos columnas en la cuadrícula */
+  font-weight: bold; /* Texto en negrita */
+}
+
+.equals:hover {
+  background-color: #00ffaa; /* Cambia a un verde más claro al pasar el cursor */
+  transform: translateY(-5px); /* Eleva el botón ligeramente */
+}
+
+button:active {
+  background-color: #c1c1c1; /* Cambia el fondo a gris claro al hacer clic */
+  transform: translateY(2px); /* Baja el botón ligeramente */
+}
+
+@media (max-width: 400px) {
+  .calculator {
+      width: 100%; /* Ajusta el ancho al 100% del contenedor */
+      padding: 20px; /* Espaciado interno */
+  }
+
+  .display {
+      font-size: 2em; /* Ajusta el tamaño de fuente */
+  }
+
+  .button {
+      font-size: 1.5em; /* Ajusta el tamaño de fuente */
+      padding: 18px; /* Ajusta el espaciado interno */
+  }
+}
